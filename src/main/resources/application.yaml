@@ -1,0 +1,14 @@
+# 必须配置
+rocketmq:
+  # 指定 nameServer
+  name-server: 192.168.56.129:9876
+  producer:
+    # 指定发送者组名 相当于 rabbitmq 的 virtual host 逻辑上的划分
+    group: deemo-group
+    # 其他可选配置
+    send-message-timeout: 300000
+    compress-message-body-threshold: 4096
+    max-message-size: 4194304
+    retry-times-when-send-async-failed: 0
+    retry-next-server: true
+    retry-times-when-send-failed: 2

@@ -13,13 +13,17 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Albrus-RocketMQ</name>
     <description>Albrus-RocketMQ</description>
+
     <properties>
         <java.version>1.8</java.version>
+        <rocketmq.vertsion>2.2.2</rocketmq.vertsion>
     </properties>
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>${rocketmq.vertsion}</version>
         </dependency>
 
         <dependency>
@@ -35,11 +39,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-rabbit-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
